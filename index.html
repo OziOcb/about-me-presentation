@@ -1,49 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="assets/img/snowbBg.jpg">
+          <h1 class="fontBlack fragment grow">Hello</h1>
+          <p class="fontBlack fragment fade-in">Paul Ozyzniewski</p>
+          <p class="fontBlack fragment fade-in">About Me</p>
+        </section>
 
-		<script src="js/reveal.js"></script>
+        <section>
+          <p>My full name is Paweł Władysław Ożyźniewski, but Paul is easier don't you think? ;)</p>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        <section>
+          <p>I live in Barnsley with my beautiful family</p>
+          <p>Agnieszka & Dawid</p>
+          <ul style="list-style:none; display:flex; justify-content:center;">
+            <li><img src="assets/img/us.jpg" alt="Me and Aga" height="300" /></li>
+            <li><img src="assets/img/dawid.gif" alt="Dawid" height="300" /></li>
+            <li><img src="assets/img/us2.jpg" alt="Me and Aga" height="300" /></li>
+          </ul>
+        </section>
+
+        <section data-background-image="assets/img/snow4.jpg" data-transition="slide-in zoom-out">
+          <section>
+            <p class="fontBlack">I usually spend every friday night doing tricks at Snozone (Castleford)</p>
+          </section>
+          <section>
+            <p class="fontBlack">And winters in Alps</p>
+
+            <ul style="list-style:none; display:flex; justify-content:center;">
+              <li><img src="assets/img/snow1.jpg" alt="snowboard" height="300" /></li>
+              <li><img src="assets/img/snow2.jpg" alt="snowboard" height="300" /></li>
+              <li><img src="assets/img/snow5.jpg" alt="snowboard" height="300" /></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>This video will use up the remaining space on the slide</h2>
+          <video class="stretch" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+        </section>
+
+        <section>Slide 4</section>
+
+        <section
+          data-background-video="assets/video/beatmaking.mp4,assets/video/baetmaking.webm"
+          data-background-video-loop
+          data-background-video-muted
+        >
+          <h2>Video</h2>
+        </section>
+
+        <section>
+          <p class="fragment grow">grow</p>
+
+          <div style="display: flex;">
+            <p class="fragment fade-up"><img src="http://lorempixel.com/640/480/transport" alt="sldfjdls" /></p>
+            <p class="fragment fade-left"><img src="http://lorempixel.com/640/480/transport" alt="sldfjdls" /></p>
+            <p class="fragment fade-up"><img src="http://lorempixel.com/640/480/transport" alt="sldfjdls" /></p>
+            <p class="fragment fade-up"><img src="http://lorempixel.com/640/480/transport" alt="sldfjdls" /></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+      Reveal.configure({
+        hash: true,
+        history: true,
+        transition: "concave",
+        transitionSpeed: "slow",
+        // Transition style for full page slide backgrounds
+        backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
+        // Parallax background image
+        parallaxBackgroundImage: "assets/img/bgParallax.jpg",
+
+        // Parallax background size
+        parallaxBackgroundSize: "2100px 1200px" // CSS syntax, e.g. "2100px 900px"
+      });
+    </script>
+  </body>
 </html>
